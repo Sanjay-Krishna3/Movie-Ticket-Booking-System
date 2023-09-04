@@ -1,0 +1,86 @@
+<html lang="en">
+<head>
+  <title></title>
+  <meta charset="utf-8">
+  <!-- <link rel="stylesheet" href="../static/style/movies.css"> -->
+
+</head>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1e1e1e;
+    color: #fff;
+}
+
+h1{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    padding-top: 100px; ;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #333;
+    color: #fff;
+}
+
+table, th, td {
+    border: 1px solid #fff;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #222;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #ccc;
+}
+
+</style>
+<body>
+<h1>Select Movie</h1>
+<div class="container">
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Movie Name</th>
+		<th>Theater Name</th>
+		<th>Theate Location</th>
+		<th>Booking</th>
+      </tr>
+    </thead>
+    <tbody>
+	{% for sh in movies %} 
+      <tr>
+        <td>{{sh.movie_name}}</td>
+        <td>{{sh.theatre_name}}</td>
+		<td>{{sh.theatre_location}}</td>
+        <td ><a href ="{% url 'seats' sh.movie_name %}">Book Now</a></td>
+      </tr>
+	  {% endfor %} 
+	</tbody>
+</table>	
+</div>
+</body>
+</html>

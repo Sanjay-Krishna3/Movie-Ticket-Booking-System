@@ -1,0 +1,61 @@
+<!-- {% extends 'base.html' %} -->
+{% load static %}
+
+{% block title %}Login 1{% endblock %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Booking - Your Ticket to Entertainment</title>
+    <link rel="stylesheet" href="../static/style/home.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="{% url 'signup' %}" > Sign Up </a></li>
+                <li><a href="{% url 'signin' %}" > Sign In </a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="hero">
+        <h1>Welcome to Movie Booking</h1>
+        <p>Your Ticket to Entertainment</p>
+    </section>
+    <!-- <section id="movies" class="movie-selection">
+        <h2>Now Showing</h2>
+        <div class="movie-card">
+            <img src="movie1.jpg" alt="Movie 1">
+            <a href="book.html" class="btn">Book Tickets</a>
+        </div>
+        <div class="movie-card">
+            <img src="movie2.jpg" alt="Movie 2">
+            <a href="book.html" class="btn">Book Tickets</a>
+        </div>
+    </section>
+    <section id="showtimes" class="showtimes">
+        <h2>Showtimes</h2>
+        <p>Showtimes for our featured movies are as follows:</p>
+        <ul>
+            <li>Movie 1 - 12:00 PM, 3:00 PM, 6:00 PM</li>
+            <li>Movie 2 - 1:00 PM, 4:00 PM, 7:00 PM</li>
+        </ul>
+    </section>
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <p>If you have any questions or need assistance, feel free to reach out to us at:</p>
+        <address>
+            Email: <a href="mailto:info@moviebooking.com">info@moviebooking.com</a><br>
+            Phone: <a href="tel:+123456789">+1 (234) 567-89</a>
+        </address>
+    </section>
+    <footer>
+        <p>&copy; 2023 Movie Booking</p>
+    </footer> -->
+</body>
+</html>
+
+{% endblock %}

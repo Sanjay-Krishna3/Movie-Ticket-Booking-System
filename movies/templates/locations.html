@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title></title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="../static/style/location.css">
+
+</head>
+<h1>
+  Select Location
+</h1>
+<body>
+<div class="container">
+  <table class="table table-striped">
+    <tbody>
+      <tr>
+        {% for l in locations %}
+          <td><a href="{% url 'theater_detail' l.theatre_location %}">{{ l.theatre_location }}</a></td>
+          {% if forloop.counter|divisibleby:2 %}
+      </tr>
+      <tr>
+          {% endif %}
+        {% endfor %}
+      </tr>
+    </tbody>
+  </table>
+</div>
+</body>
+</html>

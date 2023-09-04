@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<head>
+  <link rel="stylesheet" href="../static/style/home.css">
+
+</head>
+
+  <div class="signup-form-container">
+    <div class="signup-form">
+      <h2>Sign up</h2>
+      <form method="post">
+        {% csrf_token %}
+        {% for field in form %}
+          <div class="form-field">
+            {{ field.label_tag }}
+            {{ field }}
+            {% for error in field.errors %}
+              <p class="error">{{ error }}</p>
+            {% endfor %}
+          </div>
+        {% endfor %}
+        <button type="submit" class="btn btn-success">Sign up</button>
+      </form>
+    </div>
+  </div>
+{% endblock %}
